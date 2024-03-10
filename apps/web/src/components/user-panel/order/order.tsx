@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "~/components/shared/ui/shadcn/card";
 import Image from "next/image";
-import { Order } from "@acme/db";
+import { type Order } from "@acme/db";
 import { type OrderWithBooks } from "@acme/api";
 import OrderInfoModal from "./order-info-modal";
 import { Button } from "~/components/shared/ui/shadcn/button";

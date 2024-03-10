@@ -13,8 +13,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "@acme/db": "^0.0.0",
     "@acme/api": "^0.0.0",
+    "@acme/db": "^0.0.0",
     "@hookform/resolvers": "^3.3.4",
     "@next-auth/prisma-adapter": "^1.0.7",
     "@next/bundle-analyzer": "^14.1.0",
