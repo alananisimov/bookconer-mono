@@ -1,0 +1,22 @@
+{
+    "pipeline": {
+      "db:generate": {
+        "cache": false
+      },
+      "db:push": {
+        "cache": false
+      },
+      "build": {
+        "dependsOn": ["^build"],
+        "dotEnv": [".env.production.local", ".env.local", ".env.production", ".env"],
+        "outputs": ["dist/**", ".next/**", ".expo/**"]
+      },
+      
+      "lint": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
+    }
+  }

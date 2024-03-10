@@ -1,0 +1,7 @@
+{
+    "nuxt.isNuxtApp": false,
+    "cSpell.enableFiletypes": [
+        "!typescriptreact"
+    ],
+    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+}
