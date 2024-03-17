@@ -76,7 +76,7 @@ export default async function ReviewsList({
                 <div className="grid w-full">
                   <div className="mb-4 flex items-start gap-4">
                     <div className="grid gap-0.5 text-sm">
-                      <h3 className="font-semibold">{session?.user.name}</h3>
+                      <h3 className="font-semibold">{review.createdBy.name}</h3>
                       <time className="text-sm text-gray-500 dark:text-gray-400">
                         {(() => {
                           const today = new Date();
