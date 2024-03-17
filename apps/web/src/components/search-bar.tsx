@@ -94,7 +94,7 @@ function SearchDialog({
 }) {
   const router = useRouter();
   const books_values = books.map((el) => {
-    return { value: el.title, label: el.title, id: el.id };
+    return { value: el.title, label: el.title, id: el.id, author: el.author };
   });
   const { setShowSignInModal } = useSignInModal();
 
@@ -138,7 +138,10 @@ function SearchDialog({
               }
             >
               <ReaderIcon className="mr-2 h-3 w-3" />
-              <span>{book.label}</span>
+              <div className="inline-flex w-full justify-between">
+                {book.label}{" "}
+                <span className=" text-muted-foreground">{book.author}</span>
+              </div>
             </CommandItem>
           ))}
         </CommandGroup>

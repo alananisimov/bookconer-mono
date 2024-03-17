@@ -90,7 +90,11 @@ export default function WriteReview({
               render={({ field }) => (
                 <FormItem className="ml-auto">
                   <FormControl>
-                    <StarRating value={field.value} onChange={field.onChange} />
+                    <StarRating
+                      value={field.value}
+                      onChange={field.onChange}
+                      isLoading={isLoading}
+                    />
                   </FormControl>
 
                   <FormMessage />
@@ -139,30 +143,27 @@ export default function WriteReview({
 function StarRating({
   value,
   onChange,
+  isLoading,
 }: {
   value: number;
+  isLoading: boolean;
   onChange: (...event: unknown[]) => void;
 }) {
   return (
     <div className="inline-flex">
-      {Array.from({ length: 5 }).map(
-        (
-          _,
-          index, // Создание звездных кнопок
-        ) => (
-          <button key={index} type="button">
-            <StarIcon
-              className={cn(
-                "h-5 w-5 cursor-pointer",
-                index < value
-                  ? "fill-primary"
-                  : "fill-muted stroke-muted-foreground",
-              )}
-              onClick={() => onChange(index + 1)}
-            />
-          </button>
-        ),
-      )}
+      {Array.from({ length: 5 }).map((_, index) => (
+        <button key={index} type="button" disabled={isLoading}>
+          <StarIcon
+            className={cn(
+              "h-5 w-5 cursor-pointer",
+              index < value
+                ? "fill-primary"
+                : "fill-muted stroke-muted-foreground",
+            )}
+            onClick={() => onChange(index + 1)}
+          />
+        </button>
+      ))}
     </div>
   );
 }

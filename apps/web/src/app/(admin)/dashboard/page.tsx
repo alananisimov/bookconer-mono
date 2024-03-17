@@ -113,7 +113,7 @@ export default async function DashboardPage() {
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
                 <Card className="col-span-4 w-full">
                   <CardHeader>
-                    <CardTitle>Overview</CardTitle>
+                    <CardTitle>Обзор</CardTitle>
                   </CardHeader>
                   <CardContent className="">
                     <Overview />
@@ -121,8 +121,8 @@ export default async function DashboardPage() {
                 </Card>
                 <Card className="col-span-4 sm:col-span-3">
                   <CardHeader>
-                    <CardTitle>Последние продажи</CardTitle>
-                    <CardDescription>TODO</CardDescription>
+                    <CardTitle>Последние проданные книги</CardTitle>
+                    <CardDescription>Последние 5 книг</CardDescription>
                   </CardHeader>
                   <CardContent className="">
                     <RecentSales />

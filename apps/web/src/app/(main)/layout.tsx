@@ -73,7 +73,7 @@ export default function RootLayout({
     <html lang="ru">
       <link rel="preconnect" href="https://lh3.googleusercontent.com" />
       <body
-        className={`font-sans ${inter.variable} relative bg-[var(--background)]`}
+        className={`font-sans ${inter.variable} relative min-h-screen bg-[var(--background)] pb-48`}
       >
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-left-32 sm:-top-80"
@@ -100,10 +100,10 @@ export default function RootLayout({
             <Nav />
             {children}
           </TRPCReactProvider>
-          <Footer className="mx-auto mb-8 mt-32 flex w-fit flex-col items-center" />
+          <Footer className="absolute bottom-8 left-0 right-0 mx-auto flex w-fit flex-col items-center" />
         </ThemeProvider>
         <div
-          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] "
+          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-50rem)] "
           aria-hidden="true"
         >
           <div

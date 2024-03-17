@@ -1,5 +1,5 @@
 import { type Order, type Book } from "@acme/db";
-import { createTRPCRouter, protectedProcedure } from "../trpc";
+import { adminProcedure, createTRPCRouter, protectedProcedure } from "../trpc";
 
 export type OrderWithBooks = Order & {
   orderBook: {
@@ -26,6 +26,22 @@ export const orderRouter = createTRPCRouter({
           },
         },
       });
-    },
+    }
   ),
+  getLastFive: adminProcedure.query(async ({ ctx }) => {
+    return ctx.db.order.findMany({
+      include: {
+        user: true,
+        orderBook: {
+          include: {
+            book: true,
+          },
+        },
+      },
+      orderBy: {
+        createdAt: "desc",
+      },
+      take: 5,
+    });
+  }),
 });

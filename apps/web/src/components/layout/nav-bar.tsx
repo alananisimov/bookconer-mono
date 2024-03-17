@@ -55,19 +55,15 @@ export default function NavBar({
             </Link>
           </div>
 
-          {pathname === "/" ? (
-            <SearchBar className="  mr-3 md:ml-3 " books={books} />
-          ) : (
-            <Link href={"/"} className="mr-3 flex-1 sm:flex-none">
-              <Button
-                variant="outline"
-                className={" w-full justify-between gap-x-1 truncate"}
-              >
-                На главную
-                <ArrowLeft className="ml-2 h-4 w-4 shrink-0 " />
+          <SearchBar className="  mr-3 md:ml-3 " books={books} />
+          {pathname !== "/" && (
+            <Link href={"/"} className="mr-3 flex-1 sm:hidden sm:flex-none">
+              <Button variant="outline" size={"icon"}>
+                <ArrowLeft className="h-4 w-4 shrink-0 " />
               </Button>
             </Link>
           )}
+
           <div className="ml-auto flex flex-row items-center space-x-3 ">
             <Button
               variant="outline"

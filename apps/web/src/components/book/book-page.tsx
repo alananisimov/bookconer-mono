@@ -46,7 +46,7 @@ const DynamicReviewList = dynamic(() => import("../review/reviews-list"), {
 export default async function BookPage({ book }: { book: BookWithReviews }) {
   const average = await api.review.getAverageRating.query({ id: book.id });
   return (
-    <div className="flex max-w-6xl flex-col">
+    <div className="mx-auto flex w-full max-w-6xl flex-col">
       <div
         key="1"
         className="mx-auto grid w-full grid-cols-1 justify-between gap-y-6 px-4 md:grid-cols-2 md:gap-x-10 md:px-6 lg:px-8 "

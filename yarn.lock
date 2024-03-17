@@ -26,6 +26,17 @@
     "@prisma/extension-accelerate" "^1.0.0"
     prisma "^5.10.2"
 
+"@acme/native@file:/Users/ekaterinaa/bookconer-mono/apps/native":
+  version "1.0.0"
+  resolved "file:apps/native"
+  dependencies:
+    expo "~50.0.11"
+    expo-router "^3.4.8"
+    expo-status-bar "~1.11.1"
+    nativewind "^2.0.11"
+    react "18.2.0"
+    react-native "0.73.4"
+
 "@acme/web@file:/Users/ekaterinaa/bookconer-mono/apps/web":
   version "0.1.0"
   resolved "file:apps/web"
@@ -8294,17 +8305,6 @@ nanoid@^3.1.23, nanoid@^3.3.6, nanoid@^3.3.7:
   version "3.3.7"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz"
   integrity sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==
-
-"native@file:/Users/ekaterinaa/bookconer-mono/apps/native":
-  version "1.0.0"
-  resolved "file:apps/native"
-  dependencies:
-    expo "~50.0.11"
-    expo-router "^3.4.8"
-    expo-status-bar "~1.11.1"
-    nativewind "^2.0.11"
-    react "18.2.0"
-    react-native "0.73.4"
 
 nativewind@^2.0.11:
   version "2.0.11"

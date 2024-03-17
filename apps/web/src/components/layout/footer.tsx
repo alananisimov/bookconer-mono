@@ -4,7 +4,7 @@ import { Button } from "~/components/shared/ui/shadcn/button";
 import { Telegram } from "~/components/shared/icons";
 export default function Footer({ ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className="absolute w-full py-5 text-center" {...props}>
+    <div className="" {...props}>
       <p className="">
         Проект от{" "}
         <Link
