@@ -1,4 +1,4 @@
-
+import MillionCompiler from '@million/lint';
 /** @type {import("next").NextConfig} */
 const config = {
   transpilePackages: ["@acme/db"],
@@ -35,4 +35,6 @@ const config = {
 };
 
 
-export default config;
+export default MillionCompiler.next({ 
+  rsc: true // if used in the app router mode
+})(config);

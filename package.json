@@ -3,7 +3,8 @@
     "packageManager": "bun@1.0.23",
     "workspaces": [
         "apps/*",
-        "packages/*"
+        "packages/*",
+        "tooling/*"
     ],
     "scripts": {
         "build": "turbo run build",
@@ -13,7 +14,7 @@
         "format": "prettier --write \"**/*.{ts,tsx,md}\""
     },
     "devDependencies": {
-        "prettier": "latest",
-        "turbo": "latest"
+        "prettier": "^3.2.5",
+        "turbo": "^1.12.5"
     }
 }
